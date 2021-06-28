@@ -2,23 +2,47 @@
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.5.
 
-## Code scaffolding
+## To install use
+```sh 
+npm install tovaz-tour
+```
 
-Run `ng generate component component-name --project tovaz-tour` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project tovaz-tour`.
-> Note: Don't forget to add `--project tovaz-tour` or else it will be added to the default project in your `angular.json` file. 
+## Import the module in your app.module
+```js
+import { TovazTourModule } from 'projects/tovaz-tour/src/public-api';
+```
 
-## Build
+# How to create a tour
 
-Run `ng build tovaz-tour` to build the project. The build artifacts will be stored in the `dist/` directory.
+## You have to use the service called TovazService
+The service receive an array of StepOptions and return an observable which is called everytime that new step is displayed.
+```js let steps: StepOptions = [];
+this.tourService.start( steps ).subscribe( (step:any) => {
+  console.log('CURRENT STEP', step);
+});
+```
 
-## Publishing
+## Step and Tour Interfaces
+```js
+export interface TourOptions {
+  name, 
+  skipped?: false, 
+  ended?: false
+}
+  
+export interface StepOptions {
+  dom,      
+  title, 
+  content,  
+  image?, 
+  tour?,
+  position?, 
+  delay?, 
+  isStart?
+}
+```
 
-After building your library with `ng build tovaz-tour`, go to the dist folder `cd dist/tovaz-tour` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test tovaz-tour` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Dont forget to add in app.component.html the component tag
+```html 
+<tovaz-tour></tovaz-tour>
+```
