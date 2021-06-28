@@ -1,0 +1,18 @@
+{
+  "name": "tovaz-tour",
+  "version": "0.1.0",
+  "description": "This is a component to create easy and functional Guide Tours.",
+  "author": { "email": "williamvaldez@outlook.com", "name": "William Salvador Valdez", "url": "https://www.behance.net/williamvaldez"},
+  "keywords": [ "ionic", "guide", "tour", "angular" ],
+  "homepage": "https://github.com/tovaz/tovaz-tour.git#readme",
+  "bugs": {"url": "https://github.com/tovaz/tovaz-tour.git/issues", "email": "williamvaldez@outlook.com"},
+  "licensea": ["CC", "MIT"],
+  "peerDependencies": {
+    "@angular/common": "^12.0.5",
+    "@angular/core": "^12.0.5"
+  },
+  "dependencies": {
+    "tslib": "^2.1.0",
+    "@ionic/angular": "^5.5.2"
+  }
+}

@@ -1,0 +1,36 @@
+<div [class.hide]="!isVisible">
+
+
+  <div class="backdrop"></div>
+  <div class="hole" #hole [hidden]="step?.isStart"></div>
+
+  <div class="content" #tourcard>
+    <ion-button class="button-clear" shape="round" fill="clear" class="close-button" (click)="end()">
+      <ion-icon name="close"></ion-icon>
+    </ion-button>
+
+    <ion-card-header class="ion-no-padding">
+      <ion-card-header class="ion-no-padding">
+        <img src="{{ step?.image }}" />
+      </ion-card-header>
+    </ion-card-header>
+
+    <ion-card-content class="ion-text-center">
+      <h1>{{ step?.title }}</h1>
+      <p [innerHTML]="step?.content | sanitizeHtml"></p>
+    </ion-card-content>
+
+    <ion-footer >
+        <ion-button shape="round" color="light" fill="clear" slot="start" (click)="back()" *ngIf="stepIndex > 0">
+          <ion-label>Back</ion-label>
+        </ion-button>
+
+        <ion-button color="primary" shape="round" slot="end" fill="solid" (click)="next()" *ngIf="stepIndex < maxSteps">
+          <ion-label *ngIf="!step?.isStart">Next</ion-label>
+          <ion-label *ngIf="stepIndex == 0 && step?.isStart">Start the tour</ion-label>
+        </ion-button>
+        <ion-button color="primary" shape="round" slot="end" fill="solid" (click)="end()" *ngIf="maxSteps == stepIndex">End</ion-button>
+    </ion-footer>
+  </div>
+
+</div>
