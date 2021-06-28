@@ -22,6 +22,7 @@ export class TovazTourService {
   start(_steps : StepOptions[]){
     this.steps = _steps;
     this.maxSteps = this.steps.length-1;
+    this.stepIndex = 0;
     this._showStep.next(this.steps[this.stepIndex]);
     return this._currentStep; 
   }
