@@ -1,23 +1,23 @@
-# GuideTour
+# Tovaz Guide Tour
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.5.
 
 ## Code scaffolding
 
-Run `ng generate component component-name --project guide-tour` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project guide-tour`.
-> Note: Don't forget to add `--project guide-tour` or else it will be added to the default project in your `angular.json` file. 
+Run `ng generate component component-name --project tovaz-tour` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project tovaz-tour`.
+> Note: Don't forget to add `--project tovaz-tour` or else it will be added to the default project in your `angular.json` file. 
 
 ## Build
 
-Run `ng build guide-tour` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `ng build tovaz-tour` to build the project. The build artifacts will be stored in the `dist/` directory.
 
 ## Publishing
 
-After building your library with `ng build guide-tour`, go to the dist folder `cd dist/guide-tour` and run `npm publish`.
+After building your library with `ng build tovaz-tour`, go to the dist folder `cd dist/tovaz-tour` and run `npm publish`.
 
 ## Running unit tests
 
-Run `ng test guide-tour` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `ng test tovaz-tour` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
 ## Further help
 

@@ -1,5 +1,5 @@
 /*
- * Public API Surface of guide-tour
+ * Public API Surface of tovaz-tour
  */
 export * from './lib/interfaces';
 export * from './lib/tovaz-tour.service';
